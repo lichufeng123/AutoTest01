@@ -1,0 +1,23 @@
+[
+{
+    "data": {
+        "edit": true,
+        "memberSystemId": 2438072126925312,
+        "memberSystemIdName": "",
+        "gradeCode": "1",
+        "gradeName": "1",
+        "memberTypeId": 1590150283889152,
+        "memberTypeName": "",
+        "integralPolicyDiscount": "100",
+        "integralPolicySaleValue": "0",
+        "integralPolicyIntegralValue": "0",
+        "isDefault": 0,
+        "isRecharge": 0,
+        "validateDay": "",
+        "isCreateShow": 0,
+        "notes": "",
+        "moduleId": "120010"
+    },
+    "moduleId": "120010"
+}
+]

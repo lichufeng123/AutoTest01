@@ -1,0 +1,29 @@
+[
+  {"data": [
+    {"id": null, "channelId": 2421155262278144, "channelCode": "cf001", "channelName": "流川枫",
+                   "updateFlag": 1, "lastRetailAmountTarget": 5000, "lastOriginalAmount": 0, "lastAchievementRate": "0",
+                   "lastYears": "2025-08", "years": "2025-09", "retailAmountTarget": 0, "positiveRetailAmountTarget": 0,
+                   "organizationSetting": [2319708006230528], "organizationSetting1": 2319708006230528},
+    {"id": null, "channelId": 2450936028269056, "channelCode": "lcfTest0624", "channelName": "流川枫测试111",
+                   "updateFlag": 1, "lastRetailAmountTarget": 0, "lastOriginalAmount": 0, "lastAchievementRate": "0",
+                   "lastYears": "2025-08", "years": "2025-09", "retailAmountTarget": 2000, "positiveRetailAmountTarget": 2000,
+                   "organizationSetting": [2319708006230528], "organizationSetting1": 2319708006230528},
+    {"id": null, "channelId": 2450937188903424, "channelCode": "lcfTest06242", "channelName": "流川枫测试222",
+                   "updateFlag": 1, "lastRetailAmountTarget": 0, "lastOriginalAmount": 0, "lastAchievementRate": "0",
+                   "lastYears": "2025-08", "years": "2025-09", "retailAmountTarget": 2000, "positiveRetailAmountTarget": 2000,
+                   "organizationSetting": [2319708006230528], "organizationSetting1": 2319708006230528}
+  ],
+         "moduleId": "701204"},
+  {"data": [
+    {"id": null, "channelId": 2450936028269056, "channelCode": "lcfTest0624", "channelName": "流川枫测试111",
+                   "updateFlag": 1, "lastRetailAmountTarget": 0, "lastOriginalAmount": 0, "lastAchievementRate": "0",
+                   "lastYears": "2025-09", "years": "2025-10", "retailAmountTarget": 2000, "positiveRetailAmountTarget": 2000,
+                   "organizationSetting": [2319708006230528], "organizationSetting1": 2319708006230528},
+    {"id": null, "channelId": 2450937188903424, "channelCode": "lcfTest06242", "channelName": "流川枫测试222",
+                   "updateFlag": 1, "lastRetailAmountTarget": 0, "lastOriginalAmount": 0, "lastAchievementRate": "0",
+                   "lastYears": "2025-09", "years": "2025-10", "retailAmountTarget": 2000, "positiveRetailAmountTarget": 2000,
+                   "organizationSetting": [2319708006230528], "organizationSetting1": 2319708006230528}
+  ],
+         "moduleId": "701204"}
+
+]
