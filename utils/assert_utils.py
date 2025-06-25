@@ -1,6 +1,6 @@
 import allure
 import logging
-
+# 增加提交记录
 def log_and_assert_response(response, expect_code=200, description="接口请求"):
     """统一日志打印 + Allure 记录 + 状态断言"""
     try:
