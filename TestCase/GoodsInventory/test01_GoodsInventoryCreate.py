@@ -1,6 +1,8 @@
 import pytest
 import requests
 from APIs.GoodsInventory import GoodsInventoryAPI
+from utils.assert_utils import log_and_assert_response
+from utils.data_utils import build_data
 import config
 import json
 def build_data(json_file):
@@ -22,13 +24,16 @@ class Test_GoodsInventory:
 
     def teardown_method(self):
         pass
-
+    # 新用法
+    # @pytest.mark.parametrize("page,pageSize,moduleId", build_data("xxx.json", keys=("page", "pageSize", "moduleId")))
     @pytest.mark.parametrize("data,moduleId",build_data(json_file=config.BASE_PATH+"/data/GoodsInventoryCreate.json"))
     def test01_Create(self,data,moduleId):
 
         json_Data = {"data": data,"flag": 0, "moduleId": moduleId}
         # 创建库存单
-        r = self.GoodsInventoryAPI.goodsInventoryCreate(json_data=json_Data)
+        with allure.step("创建库存单"):
+            r = self.GoodsInventoryAPI.goodsInventoryCreate(json_data=json_Data)
+            log_and_assert_response(r, expect_code=200, description="库存单创建接口")
         #存储库存单单据编号
         Test_GoodsInventory.GoodsInventoryBillId = r.json().get('data')
         Test_GoodsInventory.GoodsInventoryBillIdList.append(r.json().get('data'))
