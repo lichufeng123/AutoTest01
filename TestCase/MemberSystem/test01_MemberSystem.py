@@ -1,16 +1,11 @@
+import logging
+
 import pytest
 from APIs.MemberSystem import MemberSystemAPI
+from utils.data_utils import build_data
 import config
 import json
-def build_data(json_file):
-    json_list = []
-    with open(json_file,"r",encoding="utf-8") as f:
-        json_data = json.load(f)
-        for case_data in json_data:
-            data = case_data.get("data")
-            moduleId = case_data.get("moduleId")
-            json_list.append((data,moduleId))
-    return json_list
+
 
 
 
@@ -20,19 +15,19 @@ class Test_MemberSystem:
     memberSystemList = []
     memberPolicyList = []
     def setup_method(self):
-        self.MemberSystemAPI = MemberSystemAPI()
+        pass
     def teardown_method(self):
         pass
     # 参数化从文件取值
-    @pytest.mark.parametrize("data,moduleId",build_data(json_file=config.BASE_PATH+"/data/MemberSystem.json"))
+    @pytest.mark.parametrize("data,moduleId",build_data(json_file=config.BASE_PATH+"/data/MemberSystem.json", keys=("data","moduleId")))
     def test01_MemberSystemCreate(self,data,moduleId):
         # 将文件中拿的值组合成json数据，用来入参
         json_Data = {"data": data, "moduleId": moduleId}
         # 创建会员体系组
-        r = self.MemberSystemAPI.createSystem(json_data=json_Data)
+        r = MemberSystemAPI.createSystem("customer_a",json_data= json_Data)
         # 存储创建会员体系组返回的id，存为数值和list
-        Test_MemberSystem.memberSystemId = r.json().get('data')
-        Test_MemberSystem.memberSystemList.append(r.json().get('data'))
+        # Test_MemberSystem.memberSystemId = r.json().get('data')
+        # Test_MemberSystem.memberSystemList.append(r.json().get('data'))
 
     # 参数化从文件取值
     @pytest.mark.parametrize("data,moduleId", build_data(json_file=config.BASE_PATH + "/data/MemberPolicy.json"))

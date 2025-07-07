@@ -60,3 +60,24 @@ class TokenHandler:
     @classmethod
     def get_refresh_token(cls, customer_code):
         return cls.get_tokens(customer_code)['refresh_token']
+
+    @classmethod
+    def get_base_url(cls, customer_code):
+        base_dir = os.path.dirname(os.path.dirname(__file__))
+        db_path = os.path.join(base_dir, 'db', 'auth.db')
+        conn = sqlite3.connect(db_path)
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT login_url FROM auth_config WHERE customer_code=?", (customer_code,))
+        result = cursor.fetchone()
+        conn.close()
+
+        if not result:
+            raise Exception(f"找不到客户 {customer_code} 的登录地址")
+
+        login_url = result[0]
+        # 从 login_url 中提取 base_url，例如 http://114.132.41.62:8174
+        from urllib.parse import urlparse
+        parsed = urlparse(login_url)
+        base_url = f"{parsed.scheme}://{parsed.netloc}"
+        return base_url
