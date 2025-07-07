@@ -9,7 +9,7 @@ class GoodsInventoryAPI:
         self.checkUrl = config.BASE_URL + '/manager/information/stockAdjustBill/check'
         self.uncheckUrl = config.BASE_URL + '/manager/information/stockAdjustBill/uncheck'
         self.deleteUrl = config.BASE_URL + '/manager/information/stockAdjustBill/delete'
-        self.moduleId = "809999"
+        self.moduleId = "701022"
 
     def goodsInventoryCreate(self, json_data):
         r = requests.post(url=self.createUrl,

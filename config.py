@@ -6,21 +6,16 @@ import os
 
 # 获取项目根路径
 BASE_PATH = os.path.dirname(__file__)
-print(BASE_PATH)
-# 比音勒芬
-BASE_URL = "http://erptest.biemlf.com:21002"
-Refreshtoken = 'bc4408e60bf54a19b6c40b5b5df81632'  # token
-Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2Vybm8iOiJhZG1pbiIsImlzcyI6InJlZ2VudHNvZnQiLCJleHAiOjg5MzA4ODAwMDAwLCJpYXQiOjE3MjA1MjQ0NjQsInVzZXJpZCI6Njg3NzIzOTExMDc5NjU0M30.TrFxuwF0Pxv08_lW4eXyfN76jF4j8euonilu_qXYWL0'
 
-# 京润
-# BASE_URL = "http://120.79.238.205:21001/"
-# Refreshtoken = '1815d3ee3e8845bda43f9ed82f81fa6b'  # token
-# Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2Vybm8iOiJhZG1pbiIsImlzcyI6InJlZ2VudHNvZnQiLCJleHAiOjg5MzA4ODAwMDAwLCJpYXQiOjE3MjA2NzY2NTEsInVzZXJpZCI6Njg3NzIzOTExMDc5NjU0M30.TnVJre5LEgFyVvfceuI76g7yMLSYZQK1T19hgoOKyD4'
+# 演示环境
+BASE_URL = "https://nebula.regentxcx.com/"
+Refreshtoken = '2b20e870047a4914b9ea59822c24d6e1'  # token
+Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2Vybm8iOiJhZG1pbiIsImlzcyI6InJlZ2VudHNvZnQiLCJleHAiOjg5MzA4ODAwMDAwLCJpYXQiOjE3NTA5MjE0NjQsInVzZXJpZCI6Njg3NzIzOTExMDc5NjU0M30.Hmv00QU-4aMQV5Wu95vCGAZUTZlicoGSm6_2TOsfK20'
 
 headers={"Authorization": Authorization, "Refreshtoken": Refreshtoken}
 
 
-Login_Url = 'http://erptest.biemlf.com:21002/manager/auth/accessToken'
-json_data = {"userNo":"admin","password":"123123","deviceType":"web"}
+# Login_Url = 'http://erptest.biemlf.com:21002/manager/auth/accessToken'
+# json_data = {"userNo":"admin","password":"123123","deviceType":"web"}
 # r.json().get('refreshToken')
 # r.json().get('token')
